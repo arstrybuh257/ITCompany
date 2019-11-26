@@ -168,6 +168,7 @@ select {
 
 .header {
   height: 100vh;
+  min-height: 450px;
   color: #fff;
 
   background-repeat: no-repeat;
@@ -415,13 +416,36 @@ padding-bottom: 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: flex-start;
+      -ms-flex-align: flex-start;
+          align-items: flex-start;
 }
 
 .section-banner h2{
   width: 50%;
+}
+
+.section-banner .btn {
+  background: none;
+  width: 50px;
+  height: 50px;
+  position: relative;
+
+  animation: btn-moove 2s ease infinite;
+}
+
+.section-banner .btn svg{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@keyframes btn-moove {
+  100% {
+    transform: translateY(40px);
+  }
 }
 
 .section-research-wrapper {
@@ -926,6 +950,10 @@ line-height: 22px;
     padding: 10px;
   }
 
+  .section-banner {
+    padding-bottom: 100px;
+  }
+
   .section-form__inner {
     padding: 60px 40px
   }
@@ -935,13 +963,13 @@ line-height: 22px;
   }
 
   .row-2 input[type="date"] {
-  color: transparent;
-} 
-.row-2 input[type="date"]:before {
-  font-size: 14px;
-  top: 0;
-  left: 0;
-}
+    color: transparent;
+  } 
+  .row-2 input[type="date"]:before {
+    font-size: 14px;
+    top: 0;
+    left: 0;
+  }
 
   .footer-col h3 {
     font-size: 16px;
